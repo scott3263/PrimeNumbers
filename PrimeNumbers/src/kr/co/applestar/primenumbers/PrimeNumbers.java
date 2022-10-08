@@ -10,7 +10,7 @@ public class PrimeNumbers {
 	private static DBConnection conn = new DBConnection();
 
 	public static void main(String[] args) {
-		logger.info("Find PrimeNumbers Java Version 11 Start");
+		logger.info("Find PrimeNumbers Java Version 11 Start Github~");
 				
 		//DB connection
 		//DBConnection conn = new DBConnection();
