@@ -25,7 +25,8 @@ select  format(max(seq), "#,##0") 갯수,
         format(max(prime_num), "#,##0") 최대값,  
         format(max(int_num), "#,##0") 최대간격,  
         format(max(calc_duration), "#,##0") 최대소요시간, 
-		format((max(seq) / max(prime_num)) * 100,2) 분포
+		format((max(seq) / max(prime_num)) * 100,2) 분포,
+        max(reg_date) 최종일시
 from applestar.prime_numbers;
 
 select * from applestar.prime_numbers where calc_duration = 5985;

@@ -18,10 +18,10 @@ public class PrimeNumbers {
 		// 현재 DB의 max값을 가져온다
 		double startVal;
 		startVal =  conn.getCurrentMaxPrimeNumber();
-		//logger.info("현재 DB의 최대값 startVal : " + startVal);
+		logger.info("현재 DB의 최대값 startVal : " + startVal);
 		
 		//직전 prime number와 연산 대상 수를 구한다
-		double currentVal = startVal + 1;
+		double currentVal = startVal + 2;
 		double lastPrimeNumber = startVal;
 		
 		//연산소요시간 기록
@@ -60,7 +60,7 @@ public class PrimeNumbers {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			currentVal++;
+			currentVal += 2;
 		}
 	}
 	
@@ -73,7 +73,7 @@ public class PrimeNumbers {
 			double seq = 2;
 			
 			while (seq < targetNum) {
-				if ((targetNum % seq) == 0){
+				if (targetNum % seq == 0){
 					return false;
 				}
 				
@@ -92,5 +92,13 @@ public class PrimeNumbers {
 		}
 		return false;
 	}
-
+	
+	public static boolean isPrime2(double d) {
+		boolean result = false ;
+		
+		
+		
+		return result;
+		
+	}
 }
