@@ -15,6 +15,11 @@ CREATE TABLE `prime_numbers` (
   -- UNIQUE KEY `hash_value_UNIQUE` (`hash_value`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='소수';
 
+CREATE UNIQUE INDEX `prime_num_UNIQUE_02` ON `prime_numbers` (`hash_value`);
+CREATE INDEX `prime_num_idx_01` ON `prime_numbers` (`int_num`);
+CREATE INDEX `prime_num_idx_02` ON `prime_numbers` (`calc_duration`);
+CREATE INDEX `prime_num_idx_03` ON `prime_numbers` (`reg_date`);CREATE INDEX `prime_num_idx_03` ON `prime_numbers` (`reg_date`);CREATE INDEX `prime_num_idx_03` ON `prime_numbers` (`reg_date`);CREATE INDEX `prime_num_idx_03` ON `prime_numbers` (`reg_date`);
+
 insert into prime_numbers(prime_num, int_num, hash_value) values (2, 0, 'asd');
 insert into prime_numbers(prime_num, int_num, hash_value) values (3, 1, '1da');
 insert into prime_numbers(prime_num, int_num, hash_value) values (5, 2, 'bgf');
@@ -31,7 +36,3 @@ from applestar.prime_numbers;
 
 select * from applestar.prime_numbers where calc_duration = 5985;
 select * from applestar.prime_numbers where int_num = 74;
-
-select date_format(reg_date, '%Y%m%d %H%i'), count(*) from applestar.prime_numbers
-group by date_format(reg_date, '%Y%m%d %H%i');
-
