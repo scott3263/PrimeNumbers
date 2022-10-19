@@ -93,12 +93,4 @@ public class PrimeNumbers {
 		return false;
 	}
 	
-	public static boolean isPrime2(double d) {
-		boolean result = false ;
-		
-		
-		
-		return result;
-		
-	}
 }
