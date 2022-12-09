@@ -13,9 +13,9 @@ public class DBConnection {
 	private static Logger logger = Logger.getLogger(DBConnection.class.getName());
 	private Connection conn;
 	
-	private static final String USERNAME = "applestar";
-	private static final String PASSWORD = "1235!@#%";
-	private static final String URL = "jdbc:mysql://192.168.0.21:3306/applestar";
+	private static final String USERNAME = "";
+	private static final String PASSWORD = "";
+	private static final String URL = "jdbc:mysql://";
 	
 	private Statement st;
 	private ResultSet rs;
